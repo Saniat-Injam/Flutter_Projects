@@ -6,6 +6,7 @@ import 'package:world_time_clock/pages/loading.dart';
 void main() {
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       //home: const Home(),
       initialRoute: "/home",
       routes: {

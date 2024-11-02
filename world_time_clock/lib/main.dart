@@ -8,7 +8,7 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: const Home(),
-      initialRoute: "/home",
+      initialRoute: "/",
       routes: {
         "/": (context) => const Loading(),
         "/home": (context) => const Home(),

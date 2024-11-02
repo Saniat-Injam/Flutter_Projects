@@ -31,7 +31,8 @@ class WorldTime {
       // Set the time property
       time = now.toString();
     } catch (e) {
-      print("Error detected: $e ");
+      //print("Error detected: $e ");
+      time = "Time data not availablee";
     }
   }
 }

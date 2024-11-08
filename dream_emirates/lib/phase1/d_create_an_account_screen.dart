@@ -100,10 +100,8 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                             firstDate: DateTime(1900),
                             lastDate: DateTime(2100),
                           );
-                          if (pickedDate != null) {
-                            _dobController.text =
-                                '${pickedDate.day}/${pickedDate.month}/${pickedDate.year}';
-                          }
+                          _dobController.text =
+                              '${pickedDate.day}/${pickedDate.month}/${pickedDate.year}';
                         },
                       ),
                     ),

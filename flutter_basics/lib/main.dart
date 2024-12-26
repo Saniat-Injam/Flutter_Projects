@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
-            title: const Text("Sultana Begum"),
+            title: const Text("Flutter Basics"),
             backgroundColor: Colors.blue,
             centerTitle: true,
           ),
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: const Text("Hello Sultana"),
+            child: const Text("Hello Flutter"),
           ),
         ),
       ),

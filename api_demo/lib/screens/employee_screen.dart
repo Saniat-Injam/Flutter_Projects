@@ -1,5 +1,5 @@
-import "package:api_demo/api_services.dart";
-import "package:api_demo/employee.dart";
+import "package:api_demo/models/employee.dart";
+import "package:api_demo/services/fetch_data.dart";
 import "package:flutter/material.dart";
 
 class EmployeeScreen extends StatelessWidget {
@@ -9,26 +9,27 @@ class EmployeeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Employee Data"),
+        title: const Text("All Employees Data"),
+        centerTitle: true,
         actions: [
           IconButton(
             onPressed: () {
-              ApiServices().getAllEmployeesData();
+              FetchData().getAllEmployeesData();
             },
             icon: const Icon(Icons.refresh),
           ),
         ],
       ),
       body: FutureBuilder(
-          future: ApiServices().getAllEmployeesData(),
-          builder: (context, everything) {
-            if (everything.hasError) {
+          future: FetchData().getAllEmployeesData(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
               return const Center(
                 child: Text("Error!! fetching employee data"),
               );
             }
-            if (everything.hasData) {
-              var data = everything.data as List<Employee>;
+            if (snapshot.hasData) {
+              var data = snapshot.data as List<Employee>;
 
               return ListView.builder(
                   itemCount: data.length,

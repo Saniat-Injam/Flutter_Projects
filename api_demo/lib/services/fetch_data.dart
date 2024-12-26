@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'package:api_demo/employee.dart';
+import 'package:api_demo/models/employee.dart';
 import 'package:http/http.dart' as http;
 
-class ApiServices {
+class FetchData {
   String baseUrl = "https://reqres.in/api/";
 
   getAllEmployeesData() async {
